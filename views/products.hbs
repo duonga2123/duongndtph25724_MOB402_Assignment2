@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="jumbotron text-center" style="background-image: url('https://png.pngtree.com/background/20210712/original/pngtree-modern-double-color-futuristic-neon-background-picture-image_1181573.jpg');">
+  <h1 style="font-weight: bolder; color: white;">Products</h1>
+    <form method="post" action="/users">
+      <button type="submit" class="btn btn-primary">Danh sách Người dùng</button>
+    </form>       
+  <form method="get" action="/add">
+    <input type="submit" value="Thêm sản phẩm" class="btn btn-primary">
+  </form>
+  <hr>
+  <h2 style="color: white;">Danh sách sản phẩm</h2> <br>
+  <table style="color: white; font-weight: bolder;" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Mã </th>
+        <th>Tên </th>
+        <th>Đơn giá</th>
+        <th>Màu sắc</th>
+        <th>Sửa</th>
+        <th>Xóa</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{this.maSP}}</td>
+        <td>{{this.tenSP}}</td>
+        <td>{{this.giaSP}}</td>
+        <td>{{this.mauSP}}</td>
+        <td>
+        <form action="/edit/{{this._id}}" method="get">
+          <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+        </td>
+        <td>
+        <form action="/delete/{{this._id}}" method="post">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        </td>
+      
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</div>
+
+</body>
+</html>

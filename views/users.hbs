@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Users</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="jumbotron text-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheeouTsFLuLqCxn-DctNMJ3JEWK8KACMkAw&usqp=CAU');">
+  <h1 style="color: white; font-weight: bolder;">Users</h1>
+  <hr>
+    <form method="post" action="/products">
+      <button type="submit" class="btn btn-primary">Danh sách sản phẩm</button>
+    </form>
+  <h2 style="color: white;">Danh sách người dùng</h2> <br>
+  <table style="color: white;" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Tên</th>
+        <th>Mật khẩu</th>
+        <th>Sửa</th>
+        <th>Xóa</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each user}}
+      <tr>
+        <td>{{this.email}}</td>
+        <td>{{this.names}}</td>
+        <td>{{this.password}}</td>
+        <td>
+        <form action="/editUsers/{{this._id}}" method="get">
+          <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+        </td>
+        <td>
+        <form action="/deleteUsers/{{this._id}}" method="post">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</div>
+
+</body>
+</html>

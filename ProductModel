@@ -1,0 +1,24 @@
+const mongoose = require("mongoose");
+
+const ProductSchema = new mongoose.Schema({
+maSP: {
+    type: String,
+    require: true
+},
+tenSP: {
+    type: String,
+    require: true
+},
+giaSP: {
+    type: Number,
+    require: true
+},
+mauSP:{
+    type: String,
+    require: true
+},
+
+});
+const ProductModel = mongoose.model("products", ProductSchema);
+
+module.exports = ProductModel;

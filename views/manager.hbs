@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Manager</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000');">
+  <div style="background-image: url('https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000');" class="jumbotron text-center">
+    <h3>Welcome</h3>
+    {{#each user}}
+    <img src="{{this.avatar}}" alt="">
+    {{/each}}
+    <h1>Manager</h1>
+    <hr>
+    <br>
+    <form method="post" action="/products">
+      <button type="submit" class="btn btn-primary">Danh sách sản phẩm</button>
+    </form>
+    <hr>
+    <br>
+    <form method="post" action="/users">
+      <button type="submit" class="btn btn-primary">Danh sách Người dùng</button>
+    </form>
+  </div>
+</body>
+</html>

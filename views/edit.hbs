@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Update</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('https://media.istockphoto.com/id/1284691550/vector/blue-abstract-geometric-dynamic-shape-paper-layers-subtle-background-vector.jpg?s=612x612&w=0&k=20&c=8a0N0F6hcHc08o2aZgTZdreUMhTxS24Zp61KgdQzGgM=');">
+  <div style="background-image: url('https://media.istockphoto.com/id/1284691550/vector/blue-abstract-geometric-dynamic-shape-paper-layers-subtle-background-vector.jpg?s=612x612&w=0&k=20&c=8a0N0F6hcHc08o2aZgTZdreUMhTxS24Zp61KgdQzGgM=');" class="jumbotron text-center">
+    <h1 class="text-center">Update</h1>
+    <hr><br>
+    <form style="background-image: url('https://media.istockphoto.com/id/1284691550/vector/blue-abstract-geometric-dynamic-shape-paper-layers-subtle-background-vector.jpg?s=612x612&w=0&k=20&c=8a0N0F6hcHc08o2aZgTZdreUMhTxS24Zp61KgdQzGgM=');" method="post" action="">
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Mã sản phẩm: </label>
+        <input class="col-lg-4" required type="text" id="maSP" name="maSP" value="{{data.maSP}}">
+        
+      </div><br>
+
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Tên sản phẩm: </label>
+        <input class="col-lg-4" required type="text" id="tenSP" name="tenSP" value="{{data.tenSP}}">
+      </div><br>
+
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Đơn giá: </label>
+        <input class="col-lg-4" required type="number" id="giaSP" name="giaSP" placeholder="Nhập Đơn giá" value="{{data.giaSP}}">
+      </div><br>
+
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Màu sắc: </label>
+        <input class="col-lg-4" required type="text" id="mauSP" name="mauSP" placeholder="Nhập Màu sắc" value="{{data.mauSP}}">
+      </div><br>
+    <br>
+
+      <div class="text-center">
+      <button type="submit" class="btn btn-primary">Thêm</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
